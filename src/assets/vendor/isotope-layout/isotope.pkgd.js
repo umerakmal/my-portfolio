@@ -18,7 +18,7 @@
 
 ( function( window, factory ) {
   // universal module definition
-  /*jshint strict: false */ /* globals define, module, require */
+  /*jshint strict: false */ /* globals define, module, import */
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( 'jquery-bridget/jquery-bridget',[ 'jquery' ], function( jQuery ) {
@@ -28,7 +28,7 @@
     // CommonJS
     module.exports = factory(
       window,
-      require('jquery')
+      import('jquery')
     );
   } else {
     // browser global
@@ -164,7 +164,7 @@ return jQueryBridget;
   // universal module definition
   /* jshint strict: false */ /* globals define, module, window */
   if ( typeof define == 'function' && define.amd ) {
-    // AMD - RequireJS
+    // AMD - importJS
     define( 'ev-emitter/ev-emitter',factory );
   } else if ( typeof module == 'object' && module.exports ) {
     // CommonJS - Browserify, Webpack
@@ -536,7 +536,7 @@ return getSize;
 
 ( function( window, factory ) {
   // universal module definition
-  /*jshint strict: false */ /*globals define, module, require */
+  /*jshint strict: false */ /*globals define, module, import */
 
   if ( typeof define == 'function' && define.amd ) {
     // AMD
@@ -549,7 +549,7 @@ return getSize;
     // CommonJS
     module.exports = factory(
       window,
-      require('desandro-matches-selector')
+      import('desandro-matches-selector')
     );
   } else {
     // browser global
@@ -775,9 +775,9 @@ return utils;
 
 ( function( window, factory ) {
   // universal module definition
-  /* jshint strict: false */ /* globals define, module, require */
+  /* jshint strict: false */ /* globals define, module, import */
   if ( typeof define == 'function' && define.amd ) {
-    // AMD - RequireJS
+    // AMD - importJS
     define( 'outlayer/item',[
         'ev-emitter/ev-emitter',
         'get-size/get-size'
@@ -787,8 +787,8 @@ return utils;
   } else if ( typeof module == 'object' && module.exports ) {
     // CommonJS - Browserify, Webpack
     module.exports = factory(
-      require('ev-emitter'),
-      require('get-size')
+      import('ev-emitter'),
+      import('get-size')
     );
   } else {
     // browser global
@@ -1333,9 +1333,9 @@ return Item;
 ( function( window, factory ) {
   'use strict';
   // universal module definition
-  /* jshint strict: false */ /* globals define, module, require */
+  /* jshint strict: false */ /* globals define, module, import */
   if ( typeof define == 'function' && define.amd ) {
-    // AMD - RequireJS
+    // AMD - importJS
     define( 'outlayer/outlayer',[
         'ev-emitter/ev-emitter',
         'get-size/get-size',
@@ -1350,10 +1350,10 @@ return Item;
     // CommonJS - Browserify, Webpack
     module.exports = factory(
       window,
-      require('ev-emitter'),
-      require('get-size'),
-      require('fizzy-ui-utils'),
-      require('./item')
+      import('ev-emitter'),
+      import('get-size'),
+      import('fizzy-ui-utils'),
+      import('./item')
     );
   } else {
     // browser global
@@ -2270,7 +2270,7 @@ return Outlayer;
 
 ( function( window, factory ) {
   // universal module definition
-  /* jshint strict: false */ /*globals define, module, require */
+  /* jshint strict: false */ /*globals define, module, import */
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( 'isotope-layout/js/item',[
@@ -2280,7 +2280,7 @@ return Outlayer;
   } else if ( typeof module == 'object' && module.exports ) {
     // CommonJS
     module.exports = factory(
-      require('outlayer')
+      import('outlayer')
     );
   } else {
     // browser global
@@ -2348,7 +2348,7 @@ return Item;
 
 ( function( window, factory ) {
   // universal module definition
-  /* jshint strict: false */ /*globals define, module, require */
+  /* jshint strict: false */ /*globals define, module, import */
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( 'isotope-layout/js/layout-mode',[
@@ -2359,8 +2359,8 @@ return Item;
   } else if ( typeof module == 'object' && module.exports ) {
     // CommonJS
     module.exports = factory(
-      require('get-size'),
-      require('outlayer')
+      import('get-size'),
+      import('outlayer')
     );
   } else {
     // browser global
@@ -2510,7 +2510,7 @@ return Item;
 
 ( function( window, factory ) {
   // universal module definition
-  /* jshint strict: false */ /*globals define, module, require */
+  /* jshint strict: false */ /*globals define, module, import */
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( 'masonry-layout/masonry',[
@@ -2521,8 +2521,8 @@ return Item;
   } else if ( typeof module == 'object' && module.exports ) {
     // CommonJS
     module.exports = factory(
-      require('outlayer'),
-      require('get-size')
+      import('outlayer'),
+      import('get-size')
     );
   } else {
     // browser global
@@ -2748,7 +2748,7 @@ return Item;
 
 ( function( window, factory ) {
   // universal module definition
-  /* jshint strict: false */ /*globals define, module, require */
+  /* jshint strict: false */ /*globals define, module, import */
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( 'isotope-layout/js/layout-modes/masonry',[
@@ -2759,8 +2759,8 @@ return Item;
   } else if ( typeof module == 'object' && module.exports ) {
     // CommonJS
     module.exports = factory(
-      require('../layout-mode'),
-      require('masonry-layout')
+      import('../layout-mode'),
+      import('masonry-layout')
     );
   } else {
     // browser global
@@ -2821,7 +2821,7 @@ return Item;
 
 ( function( window, factory ) {
   // universal module definition
-  /* jshint strict: false */ /*globals define, module, require */
+  /* jshint strict: false */ /*globals define, module, import */
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( 'isotope-layout/js/layout-modes/fit-rows',[
@@ -2831,7 +2831,7 @@ return Item;
   } else if ( typeof exports == 'object' ) {
     // CommonJS
     module.exports = factory(
-      require('../layout-mode')
+      import('../layout-mode')
     );
   } else {
     // browser global
@@ -2890,7 +2890,7 @@ return FitRows;
 
 ( function( window, factory ) {
   // universal module definition
-  /* jshint strict: false */ /*globals define, module, require */
+  /* jshint strict: false */ /*globals define, module, import */
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( 'isotope-layout/js/layout-modes/vertical',[
@@ -2900,7 +2900,7 @@ return FitRows;
   } else if ( typeof module == 'object' && module.exports ) {
     // CommonJS
     module.exports = factory(
-      require('../layout-mode')
+      import('../layout-mode')
     );
   } else {
     // browser global
@@ -2951,7 +2951,7 @@ return Vertical;
 
 ( function( window, factory ) {
   // universal module definition
-  /* jshint strict: false */ /*globals define, module, require */
+  /* jshint strict: false */ /*globals define, module, import */
   if ( typeof define == 'function' && define.amd ) {
     // AMD
     define( [
@@ -2973,16 +2973,16 @@ return Vertical;
     // CommonJS
     module.exports = factory(
       window,
-      require('outlayer'),
-      require('get-size'),
-      require('desandro-matches-selector'),
-      require('fizzy-ui-utils'),
-      require('isotope-layout/js/item'),
-      require('isotope-layout/js/layout-mode'),
+      import('outlayer'),
+      import('get-size'),
+      import('desandro-matches-selector'),
+      import('fizzy-ui-utils'),
+      import('isotope-layout/js/item'),
+      import('isotope-layout/js/layout-mode'),
       // include default layout modes
-      require('isotope-layout/js/layout-modes/masonry'),
-      require('isotope-layout/js/layout-modes/fit-rows'),
-      require('isotope-layout/js/layout-modes/vertical')
+      import('isotope-layout/js/layout-modes/masonry'),
+      import('isotope-layout/js/layout-modes/fit-rows'),
+      import('isotope-layout/js/layout-modes/vertical')
     );
   } else {
     // browser global
